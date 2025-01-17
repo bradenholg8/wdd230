@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design Principles Document - WDD 230">
+    <meta name="author" content="Your Name">
+    <title>Design Principles</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/design-principles.css">
+    <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 900px)">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Design Principles</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Visual Hierarchy</h2>
+            <p><strong>Organization:</strong> Example Company</p>
+            <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">www.example.com</a></p>
+            <img src="images/visual-hierarchy-mobile.png" alt="Mobile view example of Visual Hierarchy">
+            <p>The website uses size, color, and placement to draw attention to key elements like the navigation bar and call-to-action button.</p>
+        </section>
+
+        <section class="card">
+            <h2>White Space and Clean Design</h2>
+            <p><strong>Organization:</strong> Another Example</p>
+            <p><a href="https://www.anotherexample.com" target="_blank" rel="noopener noreferrer">www.anotherexample.com</a></p>
+            <img src="images/white-space-clean-design-mobile.png" alt="Mobile view example of White Space">
+            <p>The layout uses white space effectively to group content into distinct sections, making it easier to read and navigate.</p>
+        </section>
+
+        <section class="card">
+            <h2>Contrast</h2>
+            <p><strong>Organization:</strong> Contrast Co.</p>
+            <p><a href="https://www.contrastco.com" target="_blank" rel="noopener noreferrer">www.contrastco.com</a></p>
+            <img src="images/contrast-mobile.png" alt="Mobile view example of Contrast">
+            <p>This site uses strong color contrast between text and background to improve readability and visual appeal.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Braden Holgate - WDD 230</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

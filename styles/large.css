@@ -1,0 +1,15 @@
+@media screen and (min-width: 900px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 2rem; /* Proper spacing between sections */
+        max-width: 900px; /* Constrain layout width */
+    }
+
+    section {
+        padding: 1.5rem;
+        border: 2px solid #6c93d1;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}

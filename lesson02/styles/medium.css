@@ -1,0 +1,16 @@
+@media screen and (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .card {
+        justify-self: center;
+    }
+
+    .card img {
+        height: auto;
+    }
+}

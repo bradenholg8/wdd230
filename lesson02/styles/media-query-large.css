@@ -1,0 +1,12 @@
+@media screen and (min-width: 900px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    header {
+        background-color: #1e4c97;
+        color: white;
+    }
+}
