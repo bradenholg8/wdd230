@@ -7,7 +7,7 @@ function updatePageVisits() {
 
     let pageVisits = localStorage.getItem('pageVisits');
 
-    if (pageVisits) {
+    if (pageVisits) { 
         pageVisits = parseInt(pageVisits) + 1;
     } else {
         pageVisits = 1;

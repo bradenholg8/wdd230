@@ -1,5 +1,6 @@
 async function getUserWeather() {
     const weatherContainer = document.getElementById('location-and-weather');
+    const mapContainer = document.getElementById('map-container');
 
     if (!navigator.geolocation) {
         weatherContainer.innerHTML = `Geolocation is not supported by your browser.`;
@@ -29,6 +30,7 @@ async function getUserWeather() {
                 <p>${location}</p>
                 <p><img src="https://openweathermap.org/img/wn/${iconCode}.png" alt="${weatherDescription}" /> ${temperature}°F - ${weatherDescription}</p>
             `;
+            
         } catch (error) {
             weatherContainer.innerHTML = `Unable to fetch weather data. Please try again later.`;
             console.error('Weather API error:', error);

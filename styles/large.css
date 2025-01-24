@@ -1,5 +1,6 @@
+/* Layout adjustments for large screens */
 @media screen and (min-width: 900px) {
-    .main-section {
+    .main-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
