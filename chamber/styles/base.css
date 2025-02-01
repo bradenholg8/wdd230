@@ -15,11 +15,20 @@ header {
     flex-wrap: wrap;
 }
 
+.header-row {
+    display: flex;
+    align-items: center;
+}
+
 header img {
     width: 120px;
     height: auto;
     background-color: white;
     padding: 10px;
+}
+
+.social-links {
+    display: flex;
 }
 
 header h1 {
@@ -29,11 +38,14 @@ header h1 {
     flex: 1 100%;
 }
 
-header .social-links a {
+.social-icon {
+    height: 20px;
+    width: 20px;
     margin: 0 10px;
     color: white;
     text-decoration: none;
 }
+
 
 .join-btn {
     background-color: #3498db;
@@ -117,53 +129,3 @@ header .social-links a {
     margin: 5px 0;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-content {
-        display: block;
-        margin: 10px;
-    }
-
-    .events, .weather, .member-spotlights {
-        margin-bottom: 20px;
-    }
-
-    .footer {
-        padding: 15px;
-    }
-
-    .footer h3 {
-        font-size: 1.2rem;
-    }
-
-    .footer p {
-        font-size: 1rem;
-    }
-
-    .social-links {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .social-links a {
-        margin: 0 10px;
-    }
-
-    .join-btn {
-        width: 100%;
-    }
-
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-}

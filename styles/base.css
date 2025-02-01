@@ -181,3 +181,13 @@ footer p {
 		display: none;
 	}
 }
+
+a:active,
+a:link,
+a:visited {
+	color: navy;
+}
+
+a:hover {
+	color: purple;
+}
