@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ogden-Weber Chamber of Commerce</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="../styles/normalize.css" rel="stylesheet">
@@ -21,86 +22,93 @@
                 <a href="#"><img src="images/linkedin-icon-blue.png" alt="LinkedIn" class="social-icon"></a>
             </div>
         </div>
+
+        <!-- Dark Mode Toggle -->
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+        <span id="darkModeLabel">Dark Mode</span>
+
         <button id="menuToggle" class="hamburger">&#9776;</button>
-        <a id="menu" href="#"></a>
-  <nav>
-    <ul class="navigation">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lesson03/chamber-site-plan">Site Plan</a></li>
-      <li><a href="chamber/index.html">Chamber</a></li>
-      <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
-      <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a></li>
-    </ul>
-  </nav>
+        <nav id="navMenu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson03/chamber-site-plan">Site Plan</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+            </ul>
+        </nav>
     </header>
 
-<a href="#" class="join-btn">Join the Chamber</a>
+    <a href="#" class="join-btn">Join the Chamber</a>
 
-<section class="main-content">
-    <section class="events">
-        <h2 class="section-title">Events</h2>
+    <section class="main-content">
+        <section class="events">
+            <h2 class="section-title">Events</h2>
+            <ul>
+                <li>
+                    <strong>Event</strong><br>
+                    Details<br>
+                    <a href="#">more info...(link to event website page)</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2 class="section-title">Weather</h2>
+            <p id="location-and-weather">Loading your location and weather...</p>
+            <p class="page-visits">Page Visits: 0</p>
+        </section>
+    </section>
+
+    <section class="member-spotlights">
+        <h2 class="section-title">Member Spotlights</h2>
         <ul>
             <li>
-                <strong>Event</strong><br>
-                Details<br>
-                <a href="#">more info...(link to event website page)</a>
+                <strong>Company</strong><br>
+                Slogan<br>
+                <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
+                +555-555-5555<br>
+                <a href="#">Website</a>
+            </li>
+            <li>
+                <strong>Company</strong><br>
+                Slogan<br>
+                <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
+                +555-555-5555<br>
+                <a href="#">Website</a>
+            </li>
+            <li>
+                <strong>Company</strong><br>
+                Slogan<br>
+                <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
+                +555-555-5555<br>
+                <a href="#">Website</a>
             </li>
         </ul>
     </section>
 
-    <section class="weather">
-        <h2 class="section-title">Weather</h2>
-        <p id="location-and-weather">Loading your location and weather...</p>
-        <p class="page-visits">Page Visits: 0</p>
+    <section class="footer">
+        <div class="member-spotlights-footer">
+            <h3>Company</h3>
+            <p>Slogan</p>
+            <p>Email: <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a></p>
+            <p>Phone: +888-8888-8888</p>
+            <p><a href="#">Website</a></p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Ogden-Weber Chamber</p>
+            <p>Utah, United States</p>
+            <p id="lastModified"></p>
+        </div>
     </section>
-</section>
 
-<section class="member-spotlights">
-    <h2 class="section-title">Member Spotlights</h2>
-    <ul>
-        <li>
-            <strong>Company</strong><br>
-            Slogan<br>
-            <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-            +555-555-5555<br>
-            <a href="#">Website</a>
-        </li>
-        <li>
-            <strong>Company</strong><br>
-            Slogan<br>
-            <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-            +555-555-5555<br>
-            <a href="#">Website</a>
-        </li>
-        <li>
-            <strong>Company</strong><br>
-            Slogan<br>
-            <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-            +555-555-5555<br>
-            <a href="#">Website</a>
-        </li>
-    </ul>
-</section>
-
-<section class="footer">
-    <div class="member-spotlights-footer">
-        <h3>Company</h3>
-        <p>Slogan</p>
-        <p>Email: <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a></p>
-        <p>Phone: +888-8888-8888</p>
-        <p><a href="#">Website</a></p>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Ogden-Weber Chamber</p>
-        <p>Utah, United States</p>
-        <p id="lastModified"></p>
-    </div>
-</section>
-
-<script src="scripts/hamburger.js"></script>
-<script src="scripts/getdates.js"></script>
-<script src="scripts/hamburger.js"></script>
-
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/dark-mode.js"></script>
 </body>
 </html>

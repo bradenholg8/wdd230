@@ -3,7 +3,14 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f4f9; /* Light background for light mode */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
 }
 
 /* Header Styles */
@@ -50,7 +57,7 @@ header h1 {
 
 /* Hamburger Menu Button */
 .hamburger {
-    display: none; /* Hidden by default on large screens */
+    display: none;
     background: none;
     border: none;
     font-size: 2rem;
@@ -88,6 +95,18 @@ header h1 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title in Dark Mode */
+body.dark-mode .section-title {
+    color: white; /* Set section titles to white in dark mode */
+}
+
+/* Dark Mode Colors for Sections */
+body.dark-mode .events,
+body.dark-mode .weather,
+body.dark-mode .member-spotlights {
+    background-color: #2c2c2c; /* Dark background for these sections */
 }
 
 .section-title {
@@ -141,60 +160,4 @@ header h1 {
 }
 
 .member-spotlights-footer, .chamber-info, .footer-bottom {
-    margin-bottom: 20px;
-}
-
-.member-spotlights-footer p, .chamber-info p {
-    margin: 5px 0;
-}
-
-/* Responsive Layout: Mobile and Small Screens */
-@media (max-width: 768px) {
-    /* Hamburger button appears on small screens */
-    .hamburger {
-        display: block;
-    }
-
-    /* Hide the navigation menu by default */
-    nav {
-        display: none;
-    }
-
-    /* When the menu is toggled, display the navigation */
-    nav.show {
-        display: block;
-    }
-
-    /* Navigation list styling for small screens */
-    .navigation {
-        list-style: none;
-        padding: 0;
-        background-color: #000050;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation li {
-        margin: 10px 0;
-    }
-
-    .navigation li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .navigation li a:hover {
-        text-decoration: underline;
-    }
-
-    /* Make the join button take full width on small screens */
-    .join-btn {
-        width: 100%;
-        margin-top: 15px;
-    }
-}
+  
