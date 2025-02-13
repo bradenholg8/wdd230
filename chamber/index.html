@@ -14,7 +14,7 @@
 <body>
     
     <header>
-        <img src="images/Ogden-Weber-Chamber-logo.png" alt="Chamber of Commerce Logo">
+        <img src="images/Ogden-Weber-Chamber-logo.webp" alt="Chamber of Commerce Logo">
         <div class="header-row">
             <h1>Ogden-Weber Chamber of Commerce</h1>
             <div class="social-links">
@@ -23,7 +23,6 @@
             </div>
         </div>
 
-        <!-- Dark Mode Toggle -->
         <label class="switch">
             <input type="checkbox" id="darkModeToggle">
             <span class="slider round"></span>
@@ -41,6 +40,14 @@
             </ul>
         </nav>
     </header>
+
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-large.webp" alt="Temple Image" width="1500" height="750">
+        </picture>
+    </section>
 
     <a href="#" class="join-btn">Join the Chamber</a>
 
@@ -60,6 +67,7 @@
             <h2 class="section-title">Weather</h2>
             <p id="location-and-weather">Loading your location and weather...</p>
             <p class="page-visits">Page Visits: 0</p>
+            <p id="windchill">Wind Chill: N/A</p>
         </section>
     </section>
 
@@ -110,5 +118,6 @@
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
