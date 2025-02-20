@@ -11,11 +11,11 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://bradenholg8.github.io/wdd230/chamber.html">
     <meta property="og:url" content="https://bradenholg8.github.io/wdd230/chamber.html">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="../styles/normalize.css" rel="stylesheet">
     <link href="styles/base.css" rel="stylesheet">
     <link href="styles/large.css" rel="stylesheet">
     <link href="./images/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -50,63 +50,65 @@
         </ul>
     </nav>
 
-    <section class="hero">
-        <picture>
-            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
-            <img src="images/hero-large.webp" alt="Temple Image" width="1500" height="750">
-        </picture>
-    </section>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="Temple Image" width="1500" height="750">
+            </picture>
+        </section>
 
-    <a href="#" class="join-btn">Join the Chamber</a>
+        <a href="#" class="join-btn">Join the Chamber</a>
 
-    <section class="main-content">
-        <section class="events">
-            <h2 class="section-title">Events</h2>
+        <section class="main-content">
+            <section class="events">
+                <h2 class="section-title">Events</h2>
+                <ul>
+                    <li>
+                        <strong>Event</strong><br>
+                        Details<br>
+                        <a href="#">more info...(link to event website page)</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="weather">
+                <h2 class="section-title">Weather</h2>
+                <p id="location-and-weather">Temperature: 28</p>
+                <p id="windspeed">5 MPH</p>
+                <p class="page-visits">Page Visits: 0</p>
+                <p id="windchill">Wind Chill: N/A</p>
+            </section>
+        </section>
+
+        <section class="member-spotlights">
+            <h2 class="section-title">Member Spotlights</h2>
             <ul>
                 <li>
-                    <strong>Event</strong><br>
-                    Details<br>
-                    <a href="#">more info...(link to event website page)</a>
+                    <strong>Company</strong><br>
+                    Slogan<br>
+                    <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
+                    +555-555-5555<br>
+                    <a href="#">Website</a>
+                </li>
+                <li>
+                    <strong>Company</strong><br>
+                    Slogan<br>
+                    <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
+                    +555-555-5555<br>
+                    <a href="#">Website</a>
+                </li>
+                <li>
+                    <strong>Company</strong><br>
+                    Slogan<br>
+                    <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
+                    +555-555-5555<br>
+                    <a href="#">Website</a>
                 </li>
             </ul>
         </section>
-
-        <section class="weather">
-            <h2 class="section-title">Weather</h2>
-            <p id="location-and-weather">Temperature: 28</p>
-            <p id="windspeed">5 MPH</p>
-            <p class="page-visits">Page Visits: 0</p>
-            <p id="windchill">Wind Chill: N/A</p>
-        </section>
-    </section>
-
-    <section class="member-spotlights">
-        <h2 class="section-title">Member Spotlights</h2>
-        <ul>
-            <li>
-                <strong>Company</strong><br>
-                Slogan<br>
-                <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-                +555-555-5555<br>
-                <a href="#">Website</a>
-            </li>
-            <li>
-                <strong>Company</strong><br>
-                Slogan<br>
-                <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-                +555-555-5555<br>
-                <a href="#">Website</a>
-            </li>
-            <li>
-                <strong>Company</strong><br>
-                Slogan<br>
-                <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-                +555-555-5555<br>
-                <a href="#">Website</a>
-            </li>
-        </ul>
-    </section>
+    </main>
 
     <section class="footer">
         <div class="member-spotlights-footer">
