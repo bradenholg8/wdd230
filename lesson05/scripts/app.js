@@ -1,31 +1,47 @@
-const input = document.querySelector('#favchap');
-const button = document.querySelector('button');
-const list = document.querySelector('#list');
+document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("favchap");
+    const button = document.querySelector("button");
+    const list = document.getElementById("list");
 
-button.addEventListener('click', () => {
-    const chapter = input.value.trim();
+    let chaptersArray = JSON.parse(localStorage.getItem("bomChapters")) || [];
 
-    if (chapter !== '') {
-        const li = document.createElement('li');
-        li.textContent = chapter;
+    function displayList() {
+        list.innerHTML = "";
+        chaptersArray.forEach((chapter, index) => {
+            const li = document.createElement("li");
+            li.textContent = chapter;
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = '❌';
-        deleteButton.classList.add('delete');
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "❌";
+            deleteButton.addEventListener("click", function () {
+                chaptersArray.splice(index, 1);
+                localStorage.setItem("bomChapters", JSON.stringify(chaptersArray));
+                displayList();
+            });
 
-        li.append(deleteButton);
-
-        list.appendChild(li);
-
-        deleteButton.addEventListener('click', () => {
-            list.removeChild(li);
-            input.focus();
+            li.appendChild(deleteButton);
+            list.appendChild(li);
         });
-
-        input.value = '';
-        input.focus();
-    } else {
-        alert('Please enter a Book and Chapter!');
-        input.focus();
     }
+
+    button.addEventListener("click", function () {
+        const chapter = input.value.trim();
+
+        if (chapter === "") {
+            alert("Please enter a Book and Chapter.");
+            return;
+        }
+
+        if (!chaptersArray.includes(chapter)) {
+            chaptersArray.push(chapter);
+            localStorage.setItem("bomChapters", JSON.stringify(chaptersArray));
+            displayList();
+            input.value = "";
+            input.focus();
+        } else {
+            alert("Chapter already added!");
+        }
+    });
+
+    displayList();
 });

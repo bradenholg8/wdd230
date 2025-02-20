@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Discover Ogden-Weber - Local attractions, demographics, and events">
+    <meta name="author" content="Braden Holgate">
+    <title>Discover Ogden-Weber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/large.css" rel="stylesheet">
+    <link href="images/favicon.ico" rel="icon">
+</head>
+<body>
+    <header>
+        <img src="images/Ogden-Weber-Chamber-logo.webp" alt="Chamber of Commerce Logo">
+        <h1>Ogden-Weber Chamber of Commerce</h1>
+        <button id="menuToggle" class="hamburger">&#9776;</button>
+    </header>
+    
+    <nav id="navMenu">
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    
+    <section class="discover-layout">
+        <aside class="sidebar">
+            <h2>Discover Ogden-Weber</h2>
+            <p id="visit-message"></p>
+            <ul>
+                <li>Population: 87,000</li>
+                <li>Major Attractions: Snowbasin, Union Station</li>
+                <li>Median Home Price: $350,000</li>
+                <li>Annual Events: Harvest Moon Festival, Ogden Marathon</li>
+            </ul>
+        </aside>
+        
+        <main class="gallery">
+            <h2>Local Attractions</h2>
+            <div class="image-grid">
+                <img src="images/historic_25th_street.webp" data-src="images/photo1.webp" alt="Attraction 1" class="lazy">
+                <img src="images/nordic-valley-night-skiing.webp" data-src="images/photo2.webp" alt="Attraction 2" class="lazy">
+                <img src="images/snowy-mountain-ogden-canyon.webp" data-src="images/photo3.webp" alt="Attraction 3" class="lazy">
+                <img src="images/hill-afb-plane.webp" data-src="images/photo4.webp" alt="Attraction 4" class="lazy">
+                <img src="images/ogden-utah-temple.webp" data-src="images/photo5.webp" alt="Attraction 5" class="lazy">
+                <img src="images/dino.webp" data-src="images/photo6.webp" alt="Attraction 6" class="lazy">
+            </div>
+        </main>
+    </section>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Ogden-Weber Chamber</p>
+        <p>Utah, United States</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/lazyload.js"></script>
+    <script src="scripts/visit-tracker.js"></script>
+</body>
+</html>

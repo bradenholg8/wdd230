@@ -1,6 +1,5 @@
 async function getUserWeather() {
     const weatherContainer = document.getElementById('location-and-weather');
-    const mapContainer = document.getElementById('map-container');
 
     if (!navigator.geolocation) {
         weatherContainer.innerHTML = `Geolocation is not supported by your browser.`;
@@ -8,36 +7,18 @@ async function getUserWeather() {
     }
 
     navigator.geolocation.getCurrentPosition(async (position) => {
-        const { latitude, longitude } = position.coords;
-
         try {
             const apiKey = '18ebc47538a53bfd9885e1ae88e91ebf';
-            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
-            const response = await fetch(weatherUrl);
-
-            if (!response.ok) {
-                throw new Error(`API request failed with status ${response.status}`);
-            }
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=${apiKey}`;
+            
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("API Error");
 
             const data = await response.json();
-
-            const location = data.name;
-            const temperature = Math.round(data.main.temp);
-            const weatherDescription = data.weather[0].description;
-            const iconCode = data.weather[0].icon;
-
-            weatherContainer.innerHTML = `
-                <p>${location}</p>
-                <p><img src="https://openweathermap.org/img/wn/${iconCode}.png" alt="${weatherDescription}" /> ${temperature}°F - ${weatherDescription}</p>
-            `;
-            
+            weatherContainer.innerHTML = `${data.name}: ${Math.round(data.main.temp)}°F - ${data.weather[0].description}`;
         } catch (error) {
-            weatherContainer.innerHTML = `Unable to fetch weather data. Please try again later.`;
-            console.error('Weather API error:', error);
+            weatherContainer.innerHTML = "Error fetching weather.";
         }
-    }, (error) => {
-        weatherContainer.innerHTML = `Unable to retrieve your location. Error: ${error.message}`;
-        console.error('Geolocation error:', error);
     });
 }
 
