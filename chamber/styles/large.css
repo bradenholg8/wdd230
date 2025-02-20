@@ -4,6 +4,25 @@
         text-align: center;
     }
 
+    /* navigation */
+#navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation {
+    flex-direction: column;
+}
+
+.show li {
+	display: block;
+}
+
+ul li {
+    display: none;
+}
+
     .main-content {
         display: block;
         margin: 10px;

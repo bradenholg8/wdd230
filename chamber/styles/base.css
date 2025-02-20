@@ -55,6 +55,18 @@ header h1 {
     text-decoration: none;
 }
 
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
 /* Hamburger Menu Button */
 .hamburger {
     display: none;
