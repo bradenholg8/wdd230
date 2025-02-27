@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Form Page - WDD 230</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+
+  <header>
+    <img src="images/profile-picture-suit.webp" alt="Braden Holgate's Profile Picture">
+    <h1>Braden Holgate</h1>
+    <button id="menu" class="hamburger" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lesson03/chamber-site-plan.html">Site Plan</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>HTML Form Example</h2>
+
+    <form action="record.html" method="get" onsubmit="return validatePasswords()">
+      
+      <label for="username">Username:</label>
+      <input 
+        type="text" 
+        id="username" 
+        name="username" 
+        required 
+        placeholder="Enter a username"
+      />
+
+      <label for="password">Password:</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        required 
+        pattern="[A-Za-z0-9]{8,}" 
+        title="Password must be at least 8 characters and only contain letters and numbers."
+        placeholder="8+ characters, letters and numbers only"
+      />
+
+      <label for="password2">Confirm Password:</label>
+      <input 
+        type="password" 
+        id="password2" 
+        name="password2" 
+        required 
+        placeholder="Re-type your password"
+      />
+
+      <label for="email">BYUI Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required
+        pattern="^[A-Za-z0-9._%+\-]+@byui\.edu$"
+        title="A valid byui.edu email address."
+        placeholder="example@byui.edu"
+      />
+
+      <label for="rating">Page Rating: <span id="ratingValue">5</span></label>
+      <input 
+        type="range" 
+        id="rating" 
+        name="rating" 
+        min="1" 
+        max="10" 
+        step="1" 
+        value="5"
+      />
+
+      <button type="submit">Submit Form</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Braden Ellis Holgate</p>
+    <p>Utah, United States</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    const ratingInput = document.getElementById('rating');
+    const ratingValue = document.getElementById('ratingValue');
+    ratingInput.addEventListener('input', () => {
+      ratingValue.textContent = ratingInput.value;
+    });
+
+    function validatePasswords() {
+      const pass1 = document.getElementById('password');
+      const pass2 = document.getElementById('password2');
+
+      if (pass1.value !== pass2.value) {
+        alert('Passwords do not match. Please try again.');
+        pass1.value = '';
+        pass2.value = '';
+        pass1.focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+  
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/getdates.js"></script>
+</body>
+</html>

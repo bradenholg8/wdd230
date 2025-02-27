@@ -1,0 +1,62 @@
+:root {
+    --form-bg-color: #fff;
+    --form-text-color: #333;
+    --form-border-radius: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    border-radius: var(--form-border-radius);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="range"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--form-border-radius);
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+  
+  #ratingValue {
+    font-weight: bold;
+    margin-left: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--form-border-radius);
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
