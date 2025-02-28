@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You!</title>
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
 
-  <header>
-    <h1>My Chamber of Commerce</h1>
-  </header>
+    <header>
+        <img src="images/Ogden-Weber-Chamber-logo.webp" alt="Chamber of Commerce Logo" class="logo">
+        <h1>Ogden-Weber Chamber of Commerce</h1>
+        <div class="social-links">
+            <a href="#"><img src="/wdd230/images/facebook-icon.webp" alt="Facebook" class="social-icon"></a>
+            <a href="#"><img src="/wdd230/images/instagram-icon.webp" alt="LinkedIn" class="social-icon"></a>
+        </div>
+    </header>
+    
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+    <nav id="navMenu">
+        <ul class="navigation">
+            <li><a href="/wdd230/index.html">Home</a></li>
+            <li><a href="/wdd230/lesson03/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="./index.html">Chamber</a></li>
+            <li><a href="./discover.html">Discover</a></li>
+            <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scriptures</a></li>
+        </ul>
+    </nav>
 
-  <main>
-    <h2>Thank You!</h2>
-    <p>Your membership application has been received.</p>
-    <p>We appreciate your interest and will contact you soon.</p>
-  </main>
+    <main class="thankyou-container">
+        <section class="thankyou-message">
+            <img src="images/thank-you-graphic.webp" alt="Thank You" class="thankyou-image">
+            <p>Your membership application has been received.</p>
+            <p>We appreciate your interest and will contact you soon.</p>
+            <a href="index.html" class="return-home-btn">Return to Home</a>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 My Chamber of Commerce</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Ogden-Weber Chamber of Commerce</p>
+    </footer>
 
 </body>
 </html>

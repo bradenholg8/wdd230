@@ -358,6 +358,7 @@ footer {
 }
 
 /* Improve Form Container */
+/* Improve Form Container */
 .join-form {
     background-color: #ffffff;
     padding: 20px;
@@ -367,12 +368,11 @@ footer {
     margin: 20px auto;
 }
 
-/* Style Form Labels */
+/* Style Labels */
 .join-form label {
-    display: block;
     font-weight: bold;
+    display: block;
     margin-bottom: 5px;
-    color: #333;
 }
 
 /* Improve Input Fields */
@@ -387,16 +387,10 @@ footer {
     font-size: 1rem;
 }
 
-/* Dark Mode - Form Improvements */
+/* Dark Mode */
 .dark-mode .join-form {
     background-color: #222;
-    color: #fff;
-    border: 1px solid #444;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode .join-form label {
-    color: #fff;
+    color: white;
 }
 
 .dark-mode input,
@@ -405,11 +399,6 @@ footer {
     background-color: #333;
     color: white;
     border: 1px solid #666;
-}
-
-.dark-mode input::placeholder,
-.dark-mode textarea::placeholder {
-    color: #bbb;
 }
 
 /* Improve Submit Button */
@@ -427,4 +416,160 @@ footer {
 
 .join-form button:hover {
     background-color: #333399;
+}
+
+/* Ensure Form and Membership Info are Side by Side on Desktop */
+.join-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1000px; /* Ensures proper spacing */
+    margin: 0 auto; /* Centers the content */
+}
+
+/* Ensure Form Takes More Space */
+.join-form {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+/* Membership Info Section (Smaller Width) */
+.membership-info {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make Membership Section Stand Out */
+.membership-info h3 {
+    color: #000050;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .membership-info {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .membership-info h3 {
+    color: #ffcc00;
+}
+
+/* Responsive Design: Stack Form and Membership Info on Mobile */
+@media (max-width: 768px) {
+    .join-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .join-form, 
+    .membership-info {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* Thank You Page Container */
+.thankyou-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+/* Thank You Message */
+.thankyou-message {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Adjust Thank You Image */
+.thankyou-image {
+    display: block;
+    max-width: 70%;  /* Reduce size slightly */
+    height: auto;
+    margin: 0 auto 15px; /* Centers and adds spacing below */
+}
+
+/* Improve Paragraph Spacing */
+.thankyou-message p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Center Return Home Button */
+.return-home-btn {
+    display: inline-block;
+    background: #000050;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.return-home-btn:hover {
+    background: #333399;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .thankyou-message {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .thankyou-image {
+    filter: brightness(0.9);
+}
+
+/* General Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000050;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Chamber Logo */
+.logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Header Title */
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
 }

@@ -50,121 +50,74 @@
     <h2>Membership Application</h2>
 
     <div class="join-container">
-      <!-- FORM SECTION -->
-      <section class="join-form">
-        <form action="thankyou.html" method="get" id="chamberJoinForm">
-          
-          <!-- First Name -->
-          <label for="firstName">First Name:
-            <input 
-              type="text" 
-              id="firstName" 
-              name="firstName" 
-              required
-              placeholder="First Name"
-            />
-          </label>
+        <section class="join-form">
+            <form action="thankyou.html" method="get" id="chamberJoinForm">
+                
+                <!-- First Name -->
+                <label for="firstName">First Name:
+                    <input type="text" id="firstName" name="firstName" required placeholder="John">
+                </label>
 
-          <!-- Last Name -->
-          <label for="lastName">Last Name:
-            <input 
-              type="text" 
-              id="lastName" 
-              name="lastName" 
-              required
-              placeholder="Last Name"
-            />
-          </label>
+                <!-- Last Name -->
+                <label for="lastName">Last Name:
+                    <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                </label>
 
-          <!-- Title/Position (pattern) -->
-          <label for="titlePosition">Title / Position:
-            <input
-              type="text"
-              id="titlePosition"
-              name="titlePosition"
-              required
-              pattern="^[A-Za-z\s-]{3,}$"
-              title="Use only letters, hyphens, spaces (minimum 7 characters)."
-              placeholder="Director"
-            />
-          </label>
+                <!-- Title/Position (Pattern for 7+ Letters, Spaces, Hyphens) -->
+                <label for="titlePosition">Title / Position:
+                    <input type="text" id="titlePosition" name="titlePosition" required pattern="^[A-Za-z\s-]{7,}$" placeholder="Marketing Director">
+                </label>
 
-          <!-- Email -->
-          <label for="email">Contact Email:
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              required 
-              placeholder="Email"
-            />
-          </label>
+                <!-- Email (Includes Placeholder) -->
+                <label for="email">Contact Email:
+                    <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+                </label>
 
-          <!-- Phone -->
-          <label for="phone">Mobile Phone:
-            <input 
-              type="tel" 
-              id="phone" 
-              name="phone" 
-              required
-              placeholder="(xxx) xxx-xxxx"
-            />
-          </label>
+                <!-- Mobile Phone -->
+                <label for="phone">Mobile Phone:
+                    <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+                </label>
 
-          <!-- Business Name -->
-          <label for="businessName">Business / Organization Name:
-            <input
-              type="text"
-              id="businessName"
-              name="businessName"
-              required
-              placeholder=""
-            />
-          </label>
+                <!-- Business/Organization Name -->
+                <label for="businessName">Business / Organization Name:
+                    <input type="text" id="businessName" name="businessName" required placeholder="Your Company">
+                </label>
 
-          <!-- Membership Level -->
-          <label for="membershipLevel">Membership Level:
-            <select id="membershipLevel" name="membershipLevel" required>
-              <option value="">--Select One--</option>
-              <option value="NP">NP Membership (no fee)</option>
-              <option value="Bronze">Bronze Membership</option>
-              <option value="Silver">Silver Membership</option>
-              <option value="Gold">Gold Membership</option>
-            </select>
-          </label>
+                <!-- Membership Level Selection -->
+                <label for="membershipLevel">Membership Level:
+                    <select id="membershipLevel" name="membershipLevel" required>
+                        <option value="">--Select One--</option>
+                        <option value="NP">NP Membership (No Fee)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
 
-          <!-- Description Textarea -->
-          <label for="description">Business / Organization Description:
-            <textarea
-              id="description"
-              name="description"
-              rows="5"
-              placeholder="Tell us about your organization..."
-            ></textarea>
-          </label>
+                <!-- Business Description -->
+                <label for="description">Business / Organization Description:
+                    <textarea id="description" name="description" rows="5" placeholder="Tell us about your organization..."></textarea>
+                </label>
 
-          <!-- Hidden Timestamp -->
-          <input
-            type="hidden"
-            id="timestamp"
-            name="timestamp"
-          />
+                <!-- Hidden Timestamp Field -->
+                <input type="hidden" id="timestamp" name="timestamp">
 
-          <!-- Submit Button -->
-          <button type="submit" aria-label="Submit membership application">Apply for Membership</button>
+                <!-- Submit Button -->
+                <button type="submit" aria-label="Submit membership application">Apply for Membership</button>
+            </form>
+        </section>
 
-        </form>
-      </section>
-
-      <aside class="membership-info">
-        <h3>Membership Levels & Benefits</h3>
-        <p><strong>NP Membership</strong>: Perfect for nonprofits. No fee, but basic listing on our site, event invites, and minimal promotional support.</p>
-        <p><strong>Bronze Membership</strong>: Basic membership includes standard directory listing, access to chamber events, and networking sessions.</p>
-        <p><strong>Silver Membership</strong>: Includes all Bronze benefits plus one sponsored event per year, highlight in monthly newsletter, and discount booth at trade fairs.</p>
-        <p><strong>Gold Membership</strong>: Top-tier membership with priority listings, free booth at trade fairs, social media shout-outs, and exclusive invites to VIP events.</p>
-      </aside>
+        <!-- Membership Benefits Section -->
+        <aside class="membership-info">
+            <h3>Membership Levels & Benefits</h3>
+            <p><strong>NP Membership</strong>: No cost, access to networking events, and a directory listing.</p>
+            <p><strong>Bronze Membership</strong>: Includes NP benefits plus member spotlights and discounts on events.</p>
+            <p><strong>Silver Membership</strong>: Includes all Bronze benefits, priority listings, and special training sessions.</p>
+            <p><strong>Gold Membership</strong>: Includes all Silver benefits, VIP event invites, and premium advertising on the site.</p>
+        </aside>
     </div>
-  </main>
+</main>
+
 
   <footer>
     <p>&copy; 2025 Chamber of Commerce</p>
