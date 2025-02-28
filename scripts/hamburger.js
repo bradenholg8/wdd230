@@ -1,13 +1,19 @@
 const mainnav = document.querySelector('.navigation');
 const hambutton = document.querySelector('#menu');
 
-hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
-    hambutton.classList.toggle('active');
+if (mainnav && hambutton) {
+    hambutton.addEventListener('click', () => {
+        mainnav.classList.toggle('show');
+        hambutton.classList.toggle('active');
+        hambutton.textContent = hambutton.classList.contains('active') ? "✖" : "☰";
+    });
 
-    if (hambutton.classList.contains('active')) {
-        hambutton.innerHTML = "✖";
-    } else {
-        hambutton.innerHTML = "☰";
-    }
-});
+    // Ensure menu resets on screen resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 769) {
+            mainnav.classList.remove('show');
+            hambutton.classList.remove('active');
+            hambutton.textContent = "";
+        }
+    });
+}

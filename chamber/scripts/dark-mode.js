@@ -1,19 +1,20 @@
-// Get the toggle switch element and apply dark mode toggle functionality
-const toggleSwitch = document.getElementById('darkModeToggle');
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
 
-// Check if dark mode is enabled in localStorage or defaults to false
-if(localStorage.getItem('darkMode') === 'enabled') {
-  document.body.classList.add('dark-mode');
-  toggleSwitch.checked = true;
+// Check if dark mode was previously enabled
+if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    darkModeToggle.checked = true;
 }
 
-// Add event listener for toggle switch
-toggleSwitch.addEventListener('change', () => {
-  if(toggleSwitch.checked) {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
-  } else {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'disabled');
-  }
+// Toggle dark mode on checkbox change
+darkModeToggle.addEventListener("change", () => {
+    if (darkModeToggle.checked) {
+        body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "enabled"); // Save preference
+    } else {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "disabled"); // Save preference
+    }
 });
+

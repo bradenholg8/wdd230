@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 230 - Web Frontend Development | Braden Holgate - chamber join form">
+  <meta name="author" content="Braden Holgate">
+  <meta property="og:title" content="Braden Holgate - WDD 230 - Web Frontend Development">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bradenholg8.github.io/wdd230/chamber/join.html">
+  <meta property="og:image" content="https://bradenholg8.github.io/wdd230">
+  <title>Join the Chamber</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+</head>
+<body>
+
+    <header>
+        <img src="images/Ogden-Weber-Chamber-logo.webp" alt="Chamber Logo" width="80" height="80">
+        <h1>Chamber of Commerce</h1>
+    
+        <div class="header-right">
+            <div class="social-links">
+                <a href="#"><img src="/wdd230/images/facebook-icon.webp" alt="Facebook" width="30" height="30"></a>
+                <a href="#"><img src="/wdd230/images/instagram-icon.webp" alt="Instagram" width="30" height="30"></a>
+            </div>
+    
+            <label for="darkModeToggle" class="dark-mode-label">
+                <span>Dark Mode</span>
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    
+        <button id="menu" class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+    </header>
+    
+
+  <nav>
+    <ul class="navigation">
+      <li><a href="/wdd230/index.html">Home</a></li>
+      <li><a href="/wdd230/lesson03/chamber-site-plan.html">Site Plan</a></li>
+      <li><a href="/wdd230/chamber/index.html">Chamber</a></li>
+      <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Membership Application</h2>
+
+    <div class="join-container">
+      <!-- FORM SECTION -->
+      <section class="join-form">
+        <form action="thankyou.html" method="get" id="chamberJoinForm">
+          
+          <!-- First Name -->
+          <label for="firstName">First Name:
+            <input 
+              type="text" 
+              id="firstName" 
+              name="firstName" 
+              required
+              placeholder="First Name"
+            />
+          </label>
+
+          <!-- Last Name -->
+          <label for="lastName">Last Name:
+            <input 
+              type="text" 
+              id="lastName" 
+              name="lastName" 
+              required
+              placeholder="Last Name"
+            />
+          </label>
+
+          <!-- Title/Position (pattern) -->
+          <label for="titlePosition">Title / Position:
+            <input
+              type="text"
+              id="titlePosition"
+              name="titlePosition"
+              required
+              pattern="^[A-Za-z\s-]{3,}$"
+              title="Use only letters, hyphens, spaces (minimum 7 characters)."
+              placeholder="Director"
+            />
+          </label>
+
+          <!-- Email -->
+          <label for="email">Contact Email:
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="Email"
+            />
+          </label>
+
+          <!-- Phone -->
+          <label for="phone">Mobile Phone:
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              required
+              placeholder="(xxx) xxx-xxxx"
+            />
+          </label>
+
+          <!-- Business Name -->
+          <label for="businessName">Business / Organization Name:
+            <input
+              type="text"
+              id="businessName"
+              name="businessName"
+              required
+              placeholder=""
+            />
+          </label>
+
+          <!-- Membership Level -->
+          <label for="membershipLevel">Membership Level:
+            <select id="membershipLevel" name="membershipLevel" required>
+              <option value="">--Select One--</option>
+              <option value="NP">NP Membership (no fee)</option>
+              <option value="Bronze">Bronze Membership</option>
+              <option value="Silver">Silver Membership</option>
+              <option value="Gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <!-- Description Textarea -->
+          <label for="description">Business / Organization Description:
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Tell us about your organization..."
+            ></textarea>
+          </label>
+
+          <!-- Hidden Timestamp -->
+          <input
+            type="hidden"
+            id="timestamp"
+            name="timestamp"
+          />
+
+          <!-- Submit Button -->
+          <button type="submit" aria-label="Submit membership application">Apply for Membership</button>
+
+        </form>
+      </section>
+
+      <aside class="membership-info">
+        <h3>Membership Levels & Benefits</h3>
+        <p><strong>NP Membership</strong>: Perfect for nonprofits. No fee, but basic listing on our site, event invites, and minimal promotional support.</p>
+        <p><strong>Bronze Membership</strong>: Basic membership includes standard directory listing, access to chamber events, and networking sessions.</p>
+        <p><strong>Silver Membership</strong>: Includes all Bronze benefits plus one sponsored event per year, highlight in monthly newsletter, and discount booth at trade fairs.</p>
+        <p><strong>Gold Membership</strong>: Top-tier membership with priority listings, free booth at trade fairs, social media shout-outs, and exclusive invites to VIP events.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chamber of Commerce</p>
+  </footer>
+
+  <script src="/wdd230/chamber/scripts/dark-mode.js"></script>
+
+  <script>
+    document.getElementById('timestamp').value = Date.now();
+
+    const menuButton = document.getElementById('menu');
+    const navList = document.querySelector('.navigation');
+
+    menuButton.addEventListener('click', () => {
+      navList.classList.toggle('show');
+      menuButton.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

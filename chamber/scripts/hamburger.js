@@ -1,13 +1,6 @@
-const mainnav = document.querySelector('.navigation');
-const hambutton = document.querySelector('#menu');
+const menuButton = document.getElementById("menu");
+const navMenu = document.querySelector(".navigation");
 
-hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
-    hambutton.classList.toggle('active');
-
-    if (hambutton.classList.contains('active')) {
-        hambutton.innerHTML = "✖";
-    } else {
-        hambutton.innerHTML = "☰";
-    }
+menuButton.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
 });

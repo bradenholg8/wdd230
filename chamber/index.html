@@ -20,33 +20,33 @@
 <body>
     
     <header>
-        <img src="images/Ogden-Weber-Chamber-logo.webp" alt="Chamber of Commerce Logo">
-        <div class="header-row">
-            <h1>Ogden-Weber Chamber of Commerce</h1>
+        <button id="menu" class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+        <img src="images/Ogden-Weber-Chamber-logo.webp" alt="Chamber Logo" width="80" height="80">
+        <h1>Chamber of Commerce</h1>
+    
+        <div class="header-right">
             <div class="social-links">
-                <a href="#"><img src="images/facebook-icon-blue.png" alt="Facebook" class="social-icon"></a>
-                <a href="#"><img src="images/linkedin-icon-blue.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="#"><img src="/wdd230/images/facebook-icon.webp" alt="Facebook" width="30" height="30"></a>
+                <a href="#"><img src="/wdd230/images/instagram-icon.webp" alt="Instagram" width="30" height="30"></a>
             </div>
+    
+            <label for="darkModeToggle" class="dark-mode-label">
+                <span>Dark Mode</span>
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
         </div>
-
-        <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider round"></span>
-        </label>
-        <span id="darkModeLabel">Dark Mode</span>
-
-        <button id="menu" class="hamburger">&#9776;</button>
-        
     </header>
+    
     
     <nav id="navMenu">
         <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lessson03/chamber-site-plan">Site Plan</a></li>
+            <li><a href="/wdd230/index.html">Home</a></li>
+            <li><a href="/wdd230/lesson03/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="./index.html">Chamber</a></li>
             <li><a href="./discover.html">Discover</a></li>
             <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scriptures</a></li>
         </ul>
     </nav>
 
@@ -59,7 +59,7 @@
             </picture>
         </section>
 
-        <a href="#" class="join-btn">Join the Chamber</a>
+        <a href="/wdd230/chamber/join.html" class="join-btn">Join the Chamber</a>
 
         <section class="main-content">
             <section class="events">
@@ -111,27 +111,32 @@
     </main>
 
     <footer>
-        <section class="footer">
-            <div class="member-spotlights-footer">
-                <h3>Company</h3>
-                <p>Slogan</p>
-                <p>Email: <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a></p>
-                <p>Phone: +888-8888-8888</p>
-                <p><a href="#">Website</a></p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Ogden-Weber Chamber of Commerce</h3>
+                <p>Supporting local businesses and economic growth.</p>
+                <p><strong>Location:</strong> Ogden, Utah</p>
+                <p><strong>Email:</strong> <a href="mailto:info@ogdenweberchamber.com">info@ogdenweberchamber.com</a></p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Ogden-Weber Chamber</p>
-                <p>Utah, United States</p>
-                <p id="lastModified"></p>
+    
+            <div class="footer-social">
+                <a href="https://www.facebook.com/OWChamber/"><img src="/wdd230/images/facebook-icon.webp" alt="Facebook" class="social-icon"></a>
+            <a href="https://www.instagram.com/owchamber/"><img src="/wdd230/images/instagram-icon.webp" alt="LinkedIn" class="social-icon"></a>
             </div>
-        </section>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Ogden-Weber Chamber | All Rights Reserved</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
+    
 
     <script src="scripts/hamburger.js"></script>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/weather.js"></script>
+    <script src="/wdd230/scripts/getdates.js"></script>
+    <script src="/wdd230/scripts/weather.js"></script>
     <script src="scripts/dark-mode.js"></script>
-    <script src="scripts/windchill.js"></script>
+    <script src="/wdd230/chamber/scripts/windchill.js"></script>
 </body>
 </html>
