@@ -52,11 +52,11 @@
     border: none;
     border-radius: var(--form-border-radius);
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #0051a8;
     color: #fff;
   }
   
   button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #013872;
   }
   
