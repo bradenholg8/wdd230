@@ -45,68 +45,75 @@
             <li><a href="./index.html">Chamber</a></li>
             <li><a href="./discover.html">Discover</a></li>
             <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
-            <li><a href="/wdd230/chamber/directory.html" target="_blank" rel="noopener noreferrer">Directory</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="hero">
-            <picture>
-                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
-                <img src="images/hero-large.webp" alt="Temple Image" width="1500" height="750">
-            </picture>
-        </section>
-
-        <a href="/wdd230/chamber/join.html" class="join-btn">Join the Chamber</a>
-
-        <section class="main-content">
-            <section class="events">
-                <h2 class="section-title">Events</h2>
-                <ul>
-                    <li>
-                        <strong>Event</strong><br>
-                        Details<br>
-                        <a href="#">more info...(link to event website page)</a>
-                    </li>
-                </ul>
+        <h2>Member Directory</h2>
+    
+        <div class="menu">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+        
+        <hr>
+        <article class="grid">
+            <section>
+                <img src="/wdd230/chamber/images/holgate-inc-logo.jpg" alt="Holgate Lumber Co" />
+                <h3>Holgate Lumber Co.</h3>
+                <p>(801) 555-1234</p>
+                <p>123 Holgate St, Ogden, UT</p>
+                <p>www.holgatelumberco.com</p>
+            </section>
+    
+            <section>
+                <img src="/wdd230/chamber/images/great-scott-logo.webp" alt="Great Scott Inc." />
+                <h3>Great Scott Inc.</h3>
+                <p>(801) 555-5678</p>
+                <p>1640 Riverside Drive, Ogden, UT</p>
+                <p>www.greatscottinc.com</p>
+            </section>
+    
+            <section>
+                <img src="/wdd230/chamber/images/dunder-mifflin-logo.jpg" alt="Dunder Mifflin Paper Co." />
+                <h3>Dunder Mifflin Paper Co.</h3>
+                <p>(801) 867-5309</p>
+                <p>456 Paper St, Ogden, UT</p>
+                <p>www.dundermifflininfinity.com</p>
+            </section>
+    
+            <section>
+                <img src="/wdd230/chamber/images/wayne-enterprises-logo.jpg" alt="Wayne Enterprises" />
+                <h3>Wayne Enterprises</h3>
+                <p>(801) 555-1228</p>
+                <p>939 Bat St, Ogden, UT</p>
+                <p>www.wayneenterprises.com</p>
+            </section>
+    
+            <section>
+                <img src="/wdd230/chamber/images/dinoco-logo.jpg" alt="Dinoco" />
+                <h3>Dinoco</h3>
+                <p>(801) 555-3416</p>
+                <p>867 Dino St, Ogden, UT</p>
+                <p>www.dinoco.com</p>
+            </section>
+    
+            <section>
+                <img src="/wdd230/chamber/images/aperture-laboratories-logo.jpg" alt="Aperture Laboratories" />
+                <h3>Aperture Laboratories</h3>
+                <p>(801) 555-7899</p>
+                <p>7899 Puzzle Lane, Ogden, UT</p>
+                <p>www.solvepuzzles.com</p>
             </section>
 
-            <section class="weather">
-                <h2 class="section-title">Weather</h2>
-                <p id="location-and-weather">Temperature: 28</p>
-                <p id="windspeed">5 MPH</p>
-                <p class="page-visits">Page Visits: 0</p>
-                <p id="windchill">Wind Chill: N/A</p>
+            <section>
+                <img src="/wdd230/chamber/images/time-trap-logo.avif" alt="Time Trap Escape Rooms" />
+                <h3>Time Trap Escape Rooms</h3>
+                <p>(801) 528-5252</p>
+                <p>3590 Harrison Blvd G1 Ogden, UT</p>
+                <p>www.timetraprooms.com</p>
             </section>
-        </section>
-
-        <section class="member-spotlights">
-            <h2 class="section-title">Member Spotlights</h2>
-            <ul>
-                <li>
-                    <strong>Company</strong><br>
-                    Slogan<br>
-                    <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-                    +555-555-5555<br>
-                    <a href="#">Website</a>
-                </li>
-                <li>
-                    <strong>Company</strong><br>
-                    Slogan<br>
-                    <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-                    +555-555-5555<br>
-                    <a href="#">Website</a>
-                </li>
-                <li>
-                    <strong>Company</strong><br>
-                    Slogan<br>
-                    <a href="mailto:placeholder@placeholder.com">placeholder@placeholder.com</a><br>
-                    +555-555-5555<br>
-                    <a href="#">Website</a>
-                </li>
-            </ul>
-        </section>
+        </article>
     </main>
 
     <footer>
@@ -134,8 +141,7 @@
 
     <script src="scripts/hamburger.js"></script>
     <script src="/wdd230/scripts/getdates.js"></script>
-    <script src="/wdd230/scripts/weather.js"></script>
     <script src="scripts/dark-mode.js"></script>
-    <script src="/wdd230/chamber/scripts/windchill.js"></script>
+    <script src="/wdd230/chamber/scripts/directory.js"></script>
 </body>
 </html>

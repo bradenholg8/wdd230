@@ -70,11 +70,11 @@ header h1 {
 
 /* ================ Navigation ================ */
 nav {
+    width: 100vw;
     display: flex;
-    justify-content: center; /* Center the nav */
-    align-items: center;
     background-color: #000050;
     padding: 10px 0;
+    position: relative;
 }
 
 .navigation {
@@ -83,6 +83,8 @@ nav {
     list-style: none; /* Remove dots */
     padding: 0;
     margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -572,4 +574,194 @@ header h1 {
 .social-links a img {
     width: 30px;
     height: 30px;
+}
+
+/* ------------------- Directory Page ---------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	margin: 0 auto;
+	padding: 1rem;
+	max-width: 900px;
+	background-color: #fff;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.menu {
+    margin: 1.5rem auto;
+    padding: 0.8rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+.menu button {
+    padding: 0.8rem 1.5rem;
+    font-weight: 700;
+    border: none;
+    background-color: rgb(86, 171, 250);
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+}
+
+.menu button:hover {
+    background-color: rgb(66, 151, 230);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu button.active {
+    background-color: rgb(44, 128, 212);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+	transform: scale(1.02);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased width for better readability */
+	grid-gap: 15px;
+	align-items: center;
+	padding: 1rem;
+}
+
+.grid section {
+	text-align: center;
+	padding: 1rem;
+}
+
+.grid img {
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid section > * {
+	margin: 0.3rem;
+}
+
+.grid h3 {
+	font-family: "Caveat", cursive;
+	font-size: 1.8rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	align-items: center;
+	padding: 0.8rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none;
+}
+
+.list section h3 {
+	font-size: 1.2rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+	background-color: rgb(240, 245, 255);
+}
+
+section h3 {
+	font-size: 1.6rem;
+}
+
+section p {
+	font-weight: 600;
+	font-size: small;
+	color: #333;
+}
+
+section a {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 0.9rem;
+	color: navy;
+	letter-spacing: 1.1pt;
+	text-decoration: none;
+}
+
+section a:hover {
+	text-decoration: underline;
+	color: darkblue;
+}
+
+img {
+	height: 80px;
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .grid section {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .grid a {
+    color: #4da8ff;
+}
+
+body.dark-mode .grid p {
+    color: #ccc;
+}
+
+body.dark-mode .menu button {
+    background-color: #2a72c2;
+    color: white;
+}
+
+body.dark-mode .menu button:hover {
+    background-color: #1f5aa5;
+}
+
+body.dark-mode .nav {
+    background-color: #111;
+    color: white;
+}
+
+body.dark-mode .nav a {
+    color: #4da8ff;
+}
+
+body.dark-mode main {
+    background-color: #181818;
+    border: 1px solid #333;
 }

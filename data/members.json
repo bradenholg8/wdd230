@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Holgate Lumber",
+        "address": "123 Holgate St, Ogden, UT",
+        "phone": "(801) 555-1234",
+        "website": "https://holgatelumberco.com",
+        "image": "/wdd230/chamber/images/holgate-inc-logo.webp",
+        "membership": "Gold",
+        "industry": "Lumber"
+    },
+    {
+        "name": "Great Scott Inc",
+        "address": "1640 Riverside Drive, Ogden, UT",
+        "phone": "(884) 485-4385",
+        "website": "https://greatscottinc.com",
+        "image": "/wdd230/chamber/images/great-scott-logo.webp",
+        "membership": "Gold",
+        "industry": "Innovation"
+    },
+    {
+        "name": "Dunder Mifflin Paper Company",
+        "address": "456 Paper St, Ogden, UT",
+        "phone": "(801) 555-5678",
+        "website": "https://dundermifflininfinity.com",
+        "image": "/wdd230/chamber/images/dunder-mifflin-logo.jpg",
+        "membership": "Silver",
+        "industry": "Paper Supply"
+    },
+    {
+        "name": "Wayne Enterprises",
+        "address": "789 Summit St, Ogden, UT",
+        "phone": "(801) 555-1228",
+        "website": "https://wayneenterprises.com",
+        "image": "wayne-enterprises-logo.jpg",
+        "membership": "Gold",
+        "industry": "Innovation"
+    },
+    {
+        "name": "Dinoco",
+        "address": "867 Dino St, Ogden, UT",
+        "phone": "(801) 555-3416",
+        "website": "https://dinoco.com",
+        "image": "dinoco-logo.jgp",
+        "membership": "Bronze",
+        "industry": "Fuel"
+    },
+    {
+        "name": "Aperture Laboratories",
+        "address": "7899 Puzzle Lane, Ogden, UT",
+        "phone": "(801) 555-7899",
+        "website": "https://solvepuzzles.com",
+        "image": "aperture-laboratories-logo.jpg",
+        "membership": "Bronze",
+        "industry": "Experimental Technology"
+    },
+    {
+        "name": "Time Trap Escape Rooms",
+        "address": "3590 Harrison Blvd G1 Ogden, UT",
+        "phone": "(801) 528-5252",
+        "website": "https://timetraprooms.com",
+        "image": "time-trap-logo.avif",
+        "membership": "Gold",
+        "industry": "Outdoor Retail"
+    }
+]
