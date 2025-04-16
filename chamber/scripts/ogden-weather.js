@@ -3,7 +3,6 @@ const CITY = "Ogden";
 const STATE = "UT";
 const COUNTRY = "US";
 
-// Fetch current weather
 async function fetchWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${STATE},${COUNTRY}&appid=${API_KEY}&units=imperial`;
 
@@ -12,7 +11,6 @@ async function fetchWeather() {
         if (!response.ok) throw new Error("Weather API request failed.");
         const data = await response.json();
 
-        // Populate elements with weather data
         document.getElementById("current-temp").textContent = `${Math.round(data.main.temp)}°F`;
         document.getElementById("weather-description").textContent = data.weather[0].description;
         document.getElementById("wind-speed").textContent = `${data.wind.speed} MPH`;
@@ -23,7 +21,6 @@ async function fetchWeather() {
     }
 }
 
-// Fetch 3-day forecast
 async function fetchForecast() {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${STATE},${COUNTRY}&appid=${API_KEY}&units=imperial`;
 
@@ -33,7 +30,7 @@ async function fetchForecast() {
         const data = await response.json();
 
         const forecastContainer = document.getElementById("forecast");
-        forecastContainer.innerHTML = ""; // Clear old content
+        forecastContainer.innerHTML = "";
 
         for (let i = 0; i < data.list.length; i += 8) {
             const day = new Date(data.list[i].dt_txt).toLocaleDateString("en-US", { weekday: "long" });
@@ -49,7 +46,6 @@ async function fetchForecast() {
     }
 }
 
-// Function to calculate wind chill
 function calculateWindChill(temp, windSpeed) {
     if (temp <= 50 && windSpeed > 3) {
         return `${Math.round(
@@ -59,6 +55,5 @@ function calculateWindChill(temp, windSpeed) {
     return "N/A";
 }
 
-// Load weather and forecast on page load
 fetchWeather();
 fetchForecast();

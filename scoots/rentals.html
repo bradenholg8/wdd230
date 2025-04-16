@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoots | Rentals</title>
+  <meta name="description" content="Scoots Motor Scooter Rentals - View rental options and prices" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <button id="menu" class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+    <img src="images/scoots-logo.webp" alt="Scoots Logo" width="80" height="80" />
+    <h1>Scoots</h1>
+    <div class="header-right">
+      <div class="social-links">
+        <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" width="30" height="30" /></a>
+        <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" width="30" height="30" /></a>
+      </div>
+      <label for="darkModeToggle" class="dark-mode-label">
+        <span>Dark Mode</span>
+        <input type="checkbox" id="darkModeToggle" />
+      </label>
+    </div>
+  </header>
+
+  <nav id="navMenu">
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rentals.html" class="active">Rentals</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Rental Information</h2>
+
+    <section class="rental-types">
+      <h3>Types of Rentals</h3>
+      <ul>
+        <li><strong>Honda Metropolitan (49cc):</strong> 1 person</li>
+        <li><strong>Honda Dio (110cc):</strong> 2 person</li>
+        <li><strong>Honda PCX150 (149cc):</strong> 2 person</li>
+        <li><strong>Honda Pioneer 1000 ATV:</strong> 4 person</li>
+        <li><strong>Jeep Wrangler (4-door, manual, A/C):</strong> 5 person</li>
+        <li><strong>Jeep Wrangler (2-door, open-air, manual):</strong> 4 person</li>
+      </ul>
+    </section>
+
+    <section class="rental-agreements">
+      <h3>Rental Services and Agreements</h3>
+      <ul>
+        <li>$50 security deposit required to confirm reservations</li>
+        <li>Valid driver’s license required at time of rental</li>
+        <li>No riders under age 12 allowed on scooters</li>
+        <li>Fuel charge is not included</li>
+        <li>Unlimited mileage</li>
+        <li>Liability insurance included</li>
+        <li>Damage insurance available for purchase</li>
+        <li>Free delivery to hotels or Airbnbs for 2+ day rentals</li>
+        <li>Payment accepted: Google Pay, Apple Pay, cash, credit, debit, Venmo</li>
+        <li>Rentals may be returned to either location</li>
+      </ul>
+    </section>
+
+    <section class="pricing">
+      <h3>Rental Pricing</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Rental Type</th>
+              <th>Max. Persons</th>
+              <th>Reservation (Half Day)</th>
+              <th>Reservation (Full Day)</th>
+              <th>Walk-In (Half Day)</th>
+              <th>Walk-In (Full Day)</th>
+            </tr>
+          </thead>
+          <tbody id="rental-table-body">
+            <tr><td colspan="7">Loading data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Scoots Motor Rentals</h3>
+        <p>Explore Cozumel with freedom and style!</p>
+        <p><strong>Email:</strong> <a href="mailto:info@scootscozumel.com">info@scootscozumel.com</a></p>
+        <p><strong>Phone:</strong> +52 123 456 7890</p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Scoots | All Rights Reserved</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/dark-mode.js"></script>
+  <script src="scripts/getdates.js"></script>
+  <script src="scripts/rentals.js"></script>
+
+</body>
+</html>

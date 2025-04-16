@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="description" content="Scoots - Affordable scooter, ATV, and Jeep rentals in Cozumel." />
+  <meta name="author" content="Braden Holgate" />
+  <title>Scoots - Cozumel Scooter Rentals</title>
+  <meta property="og:title" content="Scoots | Cozumel Rentals" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/scoots-logo.webp" />
+  <meta property="og:url" content="https://yourdomain.com/scoots/index.html" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <button id="menu" class="hamburger" aria-label="Toggle Navigation" aria-controls="navMenu" aria-expanded="false">&#9776;</button>      
+    <img src="images/scoots-logo.webp" alt="Scoots Logo" width="80" height="80" />
+    <h1>Scoots</h1>
+
+    <div class="header-right">
+      <div class="social-links">
+        <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" width="30" height="30" /></a>
+        <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" width="30" height="30" /></a>
+      </div>
+
+      <label for="darkModeToggle" class="dark-mode-label">
+        <span>Dark Mode</span>
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+
+  <nav id="navMenu">
+    <ul class="navigation">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="rentals.html">Rentals</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/scooter-on-conzumel-beach.webp" media="(max-width: 500px)" />
+        <source srcset="images/scooter-on-conzumel-beach.webp" media="(max-width: 1000px)" />
+        <img src="images/scooter-on-conzumel-beach.webp" alt="Scooter on Cozumel Beach" width="1500" height="750" />
+      </picture>
+    </section>
+
+    <a href="reservations.html" class="join-btn">Make a Reservation</a>
+
+    <section class="rental-cta">
+      <h2>Explore Cozumel on Two Wheels</h2>
+      <p>Rent a scooter, ATV, or Jeep and discover the island like a local. Perfect for tourists, cruise visitors, and adventurers!</p>
+      <a href="rentals.html" class="join-btn">View Rentals</a>
+    </section>
+
+<div id="weather-alert" class="weather-alert">
+    <span id="weather-max"></span>
+    <button id="close-alert" aria-label="Close Weather Alert">❌</button>
+  </div>
+  
+  <section id="weather-container">
+    <h3>☀️ Current Weather in Cozumel</h3>
+    <p><strong>Temperature:</strong> <span id="current-temp">Loading...</span></p>
+    <p><strong>Humidity:</strong> <span id="humidity">Loading...</span></p>
+    <p><strong>Condition:</strong> <span id="weather-description">Loading...</span></p>
+    <p><strong>Icon:</strong> <span id="weather-icon"></span></p>
+  
+    <h4>🌤️ Tomorrow at 3:00pm Forecast</h4>
+    <p><strong>Temperature:</strong> <span id="forecast-temp">Loading...</span></p>
+  </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Scoots - Cozumel Rentals</h3>
+        <p>Affordable rentals for exploring the island.</p>
+        <p><strong>Location:</strong> Cozumel, Mexico</p>
+        <p><strong>Email:</strong> <a href="mailto:info@scootscozumel.com">info@scootscozumel.com</a></p>
+        <p><strong>Phone:</strong> +52-123-456-7890</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" class="social-icon" /></a>
+        <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" class="social-icon" /></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Scoots | All Rights Reserved</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/getdates.js"></script>
+  <script src="scripts/cozumel-weather.js"></script>
+  <script src="scripts/dark-mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Scoots</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <button id="menu" class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+    <img src="images/scoots-logo.webp" alt="Scoots Logo" width="80" height="80" />
+    <h1>Scoots</h1>
+    <div class="header-right">
+      <div class="social-links">
+        <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" /></a>
+      </div>
+      <label for="darkModeToggle" class="dark-mode-label">
+        <span>Dark Mode</span>
+        <input type="checkbox" id="darkModeToggle" />
+      </label>
+    </div>
+  </header>
+
+  <nav id="navMenu">
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rentals.html">Rentals</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="thank-you-section">
+    <h2>Thank You!</h2>
+    <p>We will contact you shortly.</p>
+    <a href="index.html" class="join-btn">Return to Home</a>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Scoots Cozumel</h3>
+        <p>Adventure starts here.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@scootscozumel.com">info@scootscozumel.com</a></p>
+        <p><strong>Phone:</strong> +52-123-456-7890</p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Scoots | All Rights Reserved</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/dark-mode.js"></script>
+  <script src="scripts/getdates.js"></script>
+</body>
+</html>
