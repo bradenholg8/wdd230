@@ -169,11 +169,16 @@
   /* Weather */
   #weather-container {
     background-color: #f1faff;
-    padding: 1rem;
+    padding: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+  
   
   #forecast {
     list-style: none;
@@ -202,29 +207,35 @@
   
   /* Footer */
   footer {
-    background-color: #03045e;
-    color: white;
+    background: linear-gradient(to right, #00b4d8, #0077b6);
+    color: #ffffff;
     padding: 2rem 1rem;
     text-align: center;
   }
   
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .footer-info h3 {
+    color: #ffffff;
+    font-weight: 700;
   }
   
-  .footer-info {
-    margin-bottom: 1rem;
+  .footer-info p,
+  .footer-info strong,
+  .footer-info a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
   }
   
-  .footer-social {
-    margin-top: 1rem;
+  .footer-info a:hover {
+    text-decoration: underline;
+    color: #fffbcc;
   }
   
   .footer-social img {
     width: 30px;
+    height: 30px;
     margin: 0 0.5rem;
+    filter: brightness(0) invert(1);
     transition: transform 0.3s;
   }
   
@@ -235,7 +246,7 @@
   .footer-bottom {
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: #ccc;
+    color: #eeeeee;
   }
   
   /* Rentals */

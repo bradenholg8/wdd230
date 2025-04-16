@@ -3,7 +3,7 @@ const tableBody = document.querySelector("#rental-table-body");
 fetch("data/rentals.json")
   .then(response => response.json())
   .then(data => {
-    tableBody.innerHTML = ""; // Clear "Loading data..." row
+    tableBody.innerHTML = "";
     data.forEach(item => {
       const row = document.createElement("tr");
 
